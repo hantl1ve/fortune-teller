@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  background-image: url(./1626853662_2-p-anime-fon-krasnaya-luna-2.jpg);
+  background-size: 100%;
+}
+
+#btn__open__modal {
+  width: 200px;
+  height: 150px;
+  border-radius: 20px;
+  background-color:rgba(70, 70, 70, 0.327);
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px rgb(96, 20, 20) solid;
+  transition: background-color 0.3s;
+}
+
+#btn__open__modal:hover {
+  background-color: rgba(135, 11, 11, 0.496);
+}
+
+.modal {
+  background-color: rgba(78, 47, 47, 0.293);
+  height: 100%;
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+}
+
+.modal__open {
+  display: flex;
+}
+
+.modal__content {
+  width: 300px;
+  height: 200px;
+  background-color:rgb(79, 34, 34);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(188, 188, 188);
+  font-size: 20px;
+  position: relative;
+  padding: 10px;
+  animation: modal-open;
+  animation-duration: 2s;
+}
+
+#cross__modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 3px;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+#cross__modal:hover {
+  opacity: 1;
+}
+
+.modal-close-animation {
+  animation: modal-close;
+  animation-duration: 2s;
+}
+
+@keyframes modal-open {
+  from {
+    right: 200px;
+    background-color: black;
+    color: black;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    background-color:rgba(79, 34, 34);
+    color: rgb(188, 188, 188);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-close {
+  from {
+    right: 0;
+    background-color: rgba(79, 34, 34);
+    color: rgb(188, 188, 188);
+    opacity: 1;
+  }
+  to {
+    right: -200px;
+    background-color: black;
+    color: black;
+    opacity: 0;
+  }
+}
